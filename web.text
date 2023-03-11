@@ -1,0 +1,88 @@
+Part One: Solidify Terminology
+In your own terms, define the following terms:
+
+What is HTTP?
+-Hypertext transfer protocol. Allows connection between a web browser and a 
+server.
+
+What is a URL?
+-Universal resource locators. Consists of a protocol (http, https, ftp), a 
+host name (siteName.com), a port (a unique number assigned to a server), 
+resource (location of actual information like someInfo/somethingElse.html), 
+and a query string (search terms).
+
+What is DNS?
+-Domain Name System. Site IP addresses have hostnames for easier human access.
+DNS converts the hostname into the correct IP address
+
+What is a query string?
+-Provider of extra information. What is being searched, what form inputs are 
+being taken into account, etc.
+-Information is passed as key-value pairs in the format of ?key=val. You can use
+& for multiple pairs 
+
+What are two HTTP verbs and how are they different?
+-Get and Post. Get makes requests without making any changes to server 
+while post makes requests and does impart changes to the server. 
+
+What is an HTTP request?
+-a request is a submission made with a specfied method to retrieve information
+and or impart some change to a server. You must include:
+*URL
+*Method
+*HTTP protocol version (this one is a bit lost on me, how do I specify?)
+*Any relevant headers 
+
+What is an HTTP response?
+*HTTP protocol version 
+*Numerical response status code
+*Relevant headers 
+
+What is an HTTP header? Give a couple examples of request and response headers 
+you have seen.
+*Content type (text, HTML, js, etc)
+*Date/Time according to browser 
+*Cache information
+
+What are the processes that happen when you type 
+“http://somesite.com/some/page.html” into a browser?
+-DNS is triggered and the IP address is identified, then the browser makes a 
+request to the IP address which triggers a response including the status code.
+Then the IP address loads (if it's status was 200 or 304).
+
+
+Part Two: Practice Tools
+
+Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes 
+involving the word “pirate” 
+-We never went over curl and as I'm reading up on it it seems like it needs a specific
+library? I'm a bit confused...
+
+Use dig to find what the IP address is for icanhazdadjoke.com
+-SERVER: 68.105.28.11#53(68.105.28.11)
+
+Make a simple web page and serve it using python3 -m http.server. Visit the page 
+in a browser.
+
+Part Three: Explore Dev Tools
+Build a very simple HTML form that uses the GET method (it can use the same page
+URL for the action) when the form is submitted.
+
+
+Add a field or two to the form and, after submitting it, explore in Chrome Developer 
+tools how you can view the request and response headers.
+
+Edit the page to change the form type to POST, refresh in the browser and re-submit. 
+Do you still see the field in the query string? Explore in Chrome how you can view the 
+request and response headers, as well as the form data.
+
+Part Four: Explore the URL API
+At times, it’s useful for your JavaScript to look at the URL of the browser window and 
+change how the script works depending on parts of that (particularly the query string).
+
+Read about the URL API
+
+Try some of the code examples in the Chrome Console so that you can get comfortable 
+with the basic methods and properties for instances of the URL class.
+
+-I'm going to do part 2 and 3 with my mentor. 
